@@ -9,8 +9,10 @@ This repository contains all the files created while working on the exercise for
          - As noted in the file, the data model I proposed breaks the receipt item list into its own table, which can then be joined/related to the brands table
 
 2. **Write a query that directly answers a predetermined question from a business stakeholder**
-    * Bullet
-    * Bullet
+    * Query: [top_brand_query.txt](https://github.com/bmbailey411/fetch_exercise_public/files/9670807/top_brand_query.txt)
+    * Questions answered:
+        - What are the top 5 brands by receipts scanned for most recent month?
+        - How does the ranking of the top 5 brands by receipts scanned for the recent month compare to the ranking for the previous month?
 
 3. **Evaluate Data Quality Issues in the Data Provided**
     * Bullet
