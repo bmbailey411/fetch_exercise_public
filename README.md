@@ -5,6 +5,7 @@ This repository contains all the files created while working on the exercise for
     * Files given (compressed json.gz): [brands.json.gz](https://github.com/bmbailey411/fetch_exercise_public/files/9668622/brands.json.gz), [receipts.json.gz](https://github.com/bmbailey411/fetch_exercise_public/files/9668626/receipts.json.gz), [users.json.gz](https://github.com/bmbailey411/fetch_exercise_public/files/9668632/users.json.gz)
     * R Code to decompress to JSON: [gz_unzip_r_code.txt](https://github.com/bmbailey411/fetch_exercise_public/files/9668639/gz_unzip_r_code.txt)
     * JSON files resulting from R Code output: *brands.json*, *receipts.json*, *users.json*
+         - Note, JSON files could not be embedded direcfly in the README.md file, but they are in the repository
     * Data Model: [Data Model.pdf](https://github.com/bmbailey411/fetch_exercise_public/files/9668648/Data.Model.pdf)
          - As noted in the file, the data model I proposed breaks the receipt item list into its own table, which can then be joined/related to the brands table
 
