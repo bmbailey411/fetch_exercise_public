@@ -1,0 +1,32 @@
+--Top 5 for most recently completed month
+SELECT 
+b.name AS brand_name
+,DATE_TRUNC('month',r.dateScanned)::date AS scan_month
+,RANK() OVER(ORDER BY COUNT(DISTINCT r._id) desc) as rank
+,COUNT(DISTINCT r._id) AS receipts
+FROM receipts AS r
+JOIN receipt_items AS ri ON r._id = ri.receipt_id
+JOIN brands AS b ON ri.barcode = b.barcode
+WHERE 
+--assumes we want the most recent completed month, not partial current month
+r.dateScanned BETWEEN DATE_TRUNC('month',CURRENT_DATE)::date - interval '1 month' AND  DATE_TRUNC('month',CURRENT_DATE)::date - interval '1 day'
+GROUP BY b.name, DATE_TRUNC('month',r.dateScanned)
+ORDER BY COUNT(DISTINCT r._id) desc
+LIMIT 5
+
+UNION
+
+--Top 5 for month prior to most recently completed month
+SELECT 
+b.name AS brand_name
+,DATE_TRUNC('month',r.dateScanned)::date AS scan_month
+,RANK() OVER(ORDER BY COUNT(DISTINCT r._id) desc) as rank
+,COUNT(DISTINCT r._id) AS receipts
+FROM receipts AS r
+JOIN receipt_items AS ri ON r._id = ri.receipt_id
+JOIN brands AS b ON ri.barcode = b.barcode
+WHERE 
+r.dateScanned BETWEEN DATE_TRUNC('month',CURRENT_DATE)::date - interval '2 months' AND  DATE_TRUNC('month',DATE_TRUNC('month',CURRENT_DATE)::date - interval '1 day')::date
+GROUP BY b.name, DATE_TRUNC('month',r.dateScanned)
+ORDER BY COUNT(DISTINCT r._id) desc
+LIMIT 5
