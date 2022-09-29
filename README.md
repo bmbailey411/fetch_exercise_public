@@ -24,5 +24,7 @@ This repository contains all the files created while working on the exercise for
     * The packaged Tableau workbook that I made to produce the pdf is in the repository
 
 4. **Communicate with Stakeholders**
-    * Bullet
-    * Bullet
+    * My assumption when reading the instructions for this section was that the email should answer all of the questions listed. 
+    * For the sake of context, I am emailing a Product leader by the made up name of Elizabeth
+    * Email Draft: [Email.pdf](https://github.com/bmbailey411/fetch_exercise_public/files/9671409/Email.pdf)
+
