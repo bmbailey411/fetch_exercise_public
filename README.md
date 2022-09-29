@@ -16,8 +16,12 @@ This repository contains all the files created while working on the exercise for
         - How does the ranking of the top 5 brands by receipts scanned for the recent month compare to the ranking for the previous month?
 
 3. **Evaluate Data Quality Issues in the Data Provided**
-    * Bullet
-    * Bullet
+    * To evaluate the data, I brought the JSON files directly into Tableau
+    * Tableau was able to parse out the Receipt Item List from the receipts.json file so that I could work with it in a similar manner as if I were pulling from the proposed data model above
+    * The biggest issue I found was that more than half (58%) of the items on the receipts had null values for the barcodes
+    * With the barcode being the link to our brands data, this has a large impact of doing any analysis by brand
+    * PDF summarizing findings: [Data Issues.pdf](https://github.com/bmbailey411/fetch_exercise_public/files/9671057/Data.Issues.pdf)
+    * The packaged Tableau workbook that I made to produce the pdf is in the repository
 
 4. **Communicate with Stakeholders**
     * Bullet
